@@ -16,4 +16,4 @@ if(true){
     console.log(nombre);
 }
 
-console.log(valorDado);
+console.log('Valor dado inicial:' + valorDado);

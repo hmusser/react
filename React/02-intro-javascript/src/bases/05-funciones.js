@@ -27,7 +27,7 @@ const getUser2 = () => (
         {
         uid: '213421asd',
         userName: 'El_Papi_Chulo2',
-    }
+        }
     );
 
 console.log(saludar('Amelia'));
@@ -49,10 +49,9 @@ console.log(getUser2());
     }
 };
 */
-const usuarioActivo = ( nombre ) => ({
+const getUsuarioActivo = ( nombre ) => ({
         uid: 'ABC876',
         username: nombre,
     });
-
-
-console.log(usuarioActivo('The Hulk'));
+const usuarioActivo = getUsuarioActivo('The Hulk');
+console.log(usuarioActivo));

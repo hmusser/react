@@ -54,4 +54,4 @@ const getUsuarioActivo = ( nombre ) => ({
         username: nombre,
     });
 const usuarioActivo = getUsuarioActivo('The Hulk');
-console.log(usuarioActivo));
+console.log( usuarioActivo );

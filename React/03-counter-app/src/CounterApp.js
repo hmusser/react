@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
-const CounterApp = ({value}) =>
+const CounterApp = ({value = 10}) =>
 {
     //hook
     //setCounter modifica el valor de counter.
     //el 0 es el valor por defecto que se le da a counter
     //useState me indica el uso del hook.
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState( value );
     
     //handleAdd
     const handleAdd = () => {
@@ -16,6 +16,9 @@ const CounterApp = ({value}) =>
     //setCounter ((c) => c+1);
     }
 
+    const handleReset = () =>  setCounter( value );
+    const handleSubstract = () => setCounter( counter - 1 );
+
     return (
         <>
         <h1>CounterApp</h1>
@@ -23,6 +26,9 @@ const CounterApp = ({value}) =>
         {/*ojo, no poner handleAdd() dentro del onClick porque esto hara que se ejecute la función en el momento 
         en el que se esté renderizando el componente.*/}
         <button onClick={ handleAdd }>+1</button> 
+        <button onClick={ handleReset }>Reset</button> 
+        <button onClick={ handleSubstract }>-1</button> 
+        
         </>
     );
 }

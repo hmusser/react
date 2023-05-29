@@ -5,7 +5,7 @@ const CounterApp = ({value = 10}) =>
 {
     //hook
     //setCounter modifica el valor de counter.
-    //el 0 es el valor por defecto que se le da a counter
+    //el 10 es el valor por defecto que se le da a counter
     //useState me indica el uso del hook.
     const [counter, setCounter] = useState( value );
     
